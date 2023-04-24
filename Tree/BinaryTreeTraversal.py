@@ -35,7 +35,7 @@ class Binarytree():
         q.append(root)
         while q:
             a=q.pop(0)
-            print(a.item, end=" ")
+            print(a.data, end=" ")
             if a.left != None:
                 q.append(a.left)
             if a.right != None:
@@ -55,6 +55,7 @@ N5 = Node(5)
 N6 = Node(6)
 N7 = Node(7)
 N8 = Node(8)
+N9 = Node(9)
 
 BT.root = N1
 N1.left = N2
@@ -64,7 +65,7 @@ N2.right = N5
 N3.left = N6
 N3.right = N7
 N4.left = N8
-
+N4.right = N9
 
 print("preorder : ", end="")
 BT.preorder(BT.root)
@@ -72,3 +73,5 @@ print("inorder : ", end = " ")
 BT.inorder(BT.root)
 print("postorder : ", end = " ")
 BT.postorder(BT.root)
+print("levelorder : ", end = " ")
+BT.level(BT.root)
